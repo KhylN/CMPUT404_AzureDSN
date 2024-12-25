@@ -1,0 +1,93 @@
+
+.listImg {
+  border-radius: 50%;
+  height: 50px;
+  object-fit: cover;
+  object-position: 30% 0;
+  width: 50px;
+}
+
+.listImgPost {
+  border-radius: 10%;
+  height: 50px;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: 30% 0;
+  width: 50px;
+}
+
+.container {
+  align-items: center;
+  background-color: #d1d1d1; 
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 10px; 
+  transition: all 0.2s ease;
+
+  &:hover{
+    background-color: #e0e0e0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.profileLink {
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: left; 
+
+  h1 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0; 
+  }
+
+  p {
+    color: #666;
+    font-size: 12px;
+    margin: 0; 
+  }
+}
+
+.additionalText {
+  color: #777;
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 3px;
+}
+
+button {
+  background-color: #fafafa;
+  border: none;
+  border-radius: 16px;
+  color: #333;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 5px 10px; 
+  transition: background-color 0.3s ease; /* Add a slower transition for hover effect */
+}
+
+button:hover {
+  background-color: #8b8b8b; 
+  color: #b9b9b9;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+}
+

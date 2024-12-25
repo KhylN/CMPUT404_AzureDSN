@@ -1,0 +1,25 @@
+.App {
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-link {
+  color: #61dafb;
+}

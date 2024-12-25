@@ -1,0 +1,124 @@
+.navigationBar {
+    align-items: center;
+    background-color: rgba(5, 5, 5, 0.596);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    width: 4rem;
+    z-index: 100;
+}
+
+.iconGroup {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+.bottomIconGroup {
+    margin-bottom: 0.5rem;
+}
+
+.navigationItem {
+    cursor: pointer;
+    padding: 0.6rem;
+}
+
+.navigationItem i {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.navigationItem i:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+    .navigationBar {
+        bottom: 0;
+        flex-direction: row;
+        height: auto;
+        left: 0;
+        padding: 0;
+        position: fixed;
+        width: 100%;
+    }
+
+    .iconGroup {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .navigationItem {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        padding: 0.6rem;
+    }
+
+    .navigationItem i {
+        color: #fff;
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+
+    .modalContent{
+        max-width: 80vw !important;
+    }
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black overlay
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    background-color: rgba(156, 156, 156, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.modalHeader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+  
+.modalTitle {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+  
+.closeModalButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px; 
+    margin:0;
+    position: absolute; // relative to the .modalHeader
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}

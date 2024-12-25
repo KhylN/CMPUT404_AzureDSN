@@ -1,0 +1,296 @@
+.card {
+  backdrop-filter: blur(10px);
+  background-color: rgb(156, 156, 156, 0.5);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white; // Default text color for the whole card
+  margin: 20px auto 0 auto;
+  max-width: 800px;
+  min-height: max-content;
+  min-width: 300px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+  width: 100%;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+
+}
+
+.grid {
+  align-items: center;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: auto 15fr 1fr;
+}
+
+.imgPlaceholder {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); // Optional: Light background to match the theme
+  height: 200px;
+  width: 100%;
+}
+
+.profilePic {
+  border-radius: 50%;
+  height: 50px;
+  object-fit: cover;
+  width: 50px;
+}
+
+.headerContainer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .headerText {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sharedLabel,
+  .deletedLabel {
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-left: 10px;
+    padding: 2px 6px;
+  }
+
+  .sharedLabel {
+    background-color: rgba(112, 255, 174, 0.15);
+    border: 1px solid #70ffae;
+    color: #70ffae;
+  }
+
+  // should be green
+  .publicLabel {
+    background-color: rgb(112, 255, 174, 0.15);
+    border: 1px solid #70ffae;
+    color: #70ffae;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: small;
+  }
+
+  // should be light blue
+  .friendsOnlyLabel {
+    background-color: rgba(0, 191, 255, 0.15);
+    border: 1px solid #00bfff;
+    color: #00bfff;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: small;
+  }
+
+  // should be yellow
+  .unlistedLabel {
+    background-color: rgba(255, 255, 0, 0.15);
+    border: 1px solid #ffff00;
+    color: #ffff00;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: small;
+  }
+
+  .deletedLabel {
+    background-color: rgba(255, 99, 71, 0.15);
+    border: 1px solid #ff6347;
+    color: #ff6347;
+  }
+}
+
+.userName {
+  color: white; // Ensures userName text is white
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.postTime {
+  color: white; // Ensures post time text is white
+  font-size: 0.9rem;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 95%;
+  justify-content: space-between;
+}
+
+.essentials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon {
+  align-items: center;
+  color: white; // Ensures icons are white
+
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+
+.icon i {
+  color: white; // Icon color set to white
+  display: inline-block;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.cardFooter span {
+  color: white; // Changed from #333 to white for footer text
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+  height: 100%;
+}
+
+.postTitle {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.postText {
+  color: white; // Changed from #333 to white for post content
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+
+  blockquote {
+    border-left: 3px solid #ccc;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    // Referenced from: https://css-tricks.com/examples/Blockquotes/
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+}
+
+.imgContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center; // Center image both horizontally and vertically
+  margin-top: 10px;
+}
+
+.imgContainer img {
+  border-radius: 8px;
+  height: auto;
+  max-width: 100%;
+}
+
+.liked i {
+  color: #f65b5b;
+}
+
+.shared i {
+  color: #70ffaf;
+}
+
+.comments {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.commentsHeader {
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  padding-bottom: 7px;
+  padding-top: 10px;
+}
+
+.commentsSection {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+
+.userImage {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 8px;
+  width: 40px;
+}
+
+.commentContent {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+  padding-top: 7px;
+}
+
+.authorTime {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.commentAuthor {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.timePosted {
+  color: #d0d0d0;
+  font-size: 0.8rem;
+}
+
+.comment {
+  display: flex;
+  flex-direction: center;
+  padding: 8px 0;
+}
+
+.commentText {
+  color: #fff;
+}
+
+.comment__list{
+  display: flex;
+  flex-flow: column;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  width: 100%;
+}
+
+.post__modal{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .card{
+    max-width: 90vw !important;
+    padding: 0.75rem 0.9rem 1rem 0.75rem !important;
+  }
+}

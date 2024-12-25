@@ -1,0 +1,208 @@
+.container {
+  align-items: flex-start;
+  background-color: #777;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  padding: 15px;
+  transition: ease-in-out 0.2s all;
+  width: 100%;
+
+  .post_bar {
+    align-items: center;
+    background-color: #777;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 0.5rem;
+    width: 98%;
+
+    .user_image {
+      border-radius: 50%;
+      height: 42px;
+      object-fit: cover;
+      width: 42px;
+    }
+
+    .vertical_divider {
+      background-color: #ccc;
+      height: 100%;
+      margin: 0 10px;
+      width: 1px;
+    }
+
+    .post_input {
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      flex: 1;
+      font-size: 14px;
+      margin-left: 1rem;
+      outline: none;
+      padding: 8px;
+    }
+
+    .add_button {
+      align-items: center;
+      background-color: transparent;
+      background-color: #a0a0a0;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      font-size: 18px;
+      font-weight: bold;
+      height: 35px;
+      justify-content: center;
+      margin-left: 0.5rem;
+      width: 35px;
+      &:hover {
+        background-color: #70ffaf;
+      }
+    }
+  }
+
+  .detail_container {
+    margin-top: 15px;
+    width: 100%;
+
+    .input_label {
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 2%;
+      margin-top: 10px;
+    }
+
+    .description_input,
+    .content_input {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 1rem;
+
+      &::placeholder {
+        color: #fafafa;
+      }
+    }
+
+    .image_preview{
+      align-items: center;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      img{
+        border-radius: 5px;
+        height: 30%;
+        max-width: 30%;
+      }
+    }
+  }
+
+  .button_bar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+
+    .left_bar {
+      align-items: center;
+      display: flex;
+      gap: 15px;
+      height: 100%;
+
+      .icon_bar {
+        background-color: #555;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .icon_section {
+          align-items: center;
+          color: white;
+          cursor: pointer;
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          padding: 10px;
+          transition: background-color 0.3s ease;
+          
+          &:hover {
+            background-color: #70ffaf;
+          }
+
+          &.active {
+            background-color: #70ffaf;
+            color: black;
+          }
+
+          .icon {
+            background-size: cover;
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+
+      .mark_button {
+        background-color: #555;
+        border: none;
+        border-radius: 10px;
+        color: rgb(0, 0, 0);
+        color: white;
+        cursor: pointer;
+        font-size: medium;
+        height: 100%;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          background-color: rgb(112, 209, 141);
+        }
+
+        &.active {
+          background-color: #70ffaf;
+          color: black;
+        }
+      }
+    }
+
+    .post_button {
+      background-color: #555;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      font-size: medium;
+      height: 100%;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #70ffaf;
+      }
+
+      &:disabled {
+        background-color: #999;
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: #999;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .add_button{
+    margin-left: 0.5rem;
+    svg{
+      font-size: 1.25rem !important;
+    }
+  }
+}
